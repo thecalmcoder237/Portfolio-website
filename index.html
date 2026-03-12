@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jesse-Joel Nzumafor - Digital Marketing & Strategy Specialist with 7+ years experience driving growth for SaaS, B2B and B2C brands.">
+  <title>Jesse-Joel Nzumafor | Digital Marketing Specialist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise-overlay"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">JN</a>
+    <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="#roles">Roles</a></li>
+      <li><a href="#companies">Companies</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-bg-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+      </div>
+      <div class="hero-content">
+        <p class="hero-greeting"><span class="typed-cursor">|</span> Hello, I'm</p>
+        <h1 class="hero-name">Jesse-Joel<br><span class="accent">Nzumafor</span></h1>
+        <p class="hero-title">Digital Marketing & Strategy Specialist</p>
+        <p class="hero-tagline">7+ years driving traffic, leads, and revenue for international SaaS and B2B brands. Data-driven, results-oriented, and ready to scale your growth.</p>
+        <div class="hero-stats">
+          <span class="stat"><strong>35%</strong> traffic growth</span>
+          <span class="stat-divider">•</span>
+          <span class="stat"><strong>40%</strong> organic visibility</span>
+          <span class="stat-divider">•</span>
+          <span class="stat"><strong>2.5K+</strong> leads generated</span>
+        </div>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary btn-magnetic">Get in Touch</a>
+          <a href="projects.html" class="btn btn-outline btn-magnetic">View Projects</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <img src="assets/profile.png" alt="Jesse-Joel Nzumafor - Professional Headshot" class="hero-image">
+          <div class="hero-image-accent"></div>
+          <div class="hero-image-ring"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="section-inner">
+        <h2 class="section-title"><span class="section-num">01</span> About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>Digital marketing specialist with 7 years' experience managing international projects, agency experience, and both B2B and B2C campaigns. I combine strong analytical thinking with leadership skills proven by quantifiable outcomes for multiple organizations.</p>
+            <p>An outside-the-box thinker, innovative and results-oriented—I deliver measurable impact. My work spans SEO, content strategy, PPC, email marketing, and team leadership across US, European, and African markets.</p>
+            <div class="about-highlights">
+              <div class="highlight" data-tilt><strong>35%</strong> increase in website traffic</div>
+              <div class="highlight" data-tilt><strong>40%</strong> boost in organic search visibility</div>
+              <div class="highlight" data-tilt><strong>2,500+</strong> qualified leads from webinars</div>
+              <div class="highlight" data-tilt><strong>20%</strong> improvement in campaign ROI</div>
+            </div>
+          </div>
+          <div class="about-details">
+            <div class="detail-card" data-tilt>
+              <h3>Location</h3>
+              <p>Douala, Cameroon</p>
+            </div>
+            <div class="detail-card" data-tilt>
+              <h3>Languages</h3>
+              <p>English (Native), French</p>
+            </div>
+            <div class="detail-card" data-tilt>
+              <h3>Certifications</h3>
+              <p>CIM Professional Diploma in Digital Marketing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <div class="section-inner section-wide">
+        <h2 class="section-title"><span class="section-num">02</span> Projects</h2>
+        <p class="section-subtitle">Design • Technical • Videos • Event Marketing • Email Campaigns</p>
+        <p class="projects-cta-wrap">
+          <a href="projects.html" class="btn btn-outline btn-magnetic">See all projects and try demos</a>
+        </p>
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="technical">Technical</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+          <button class="filter-btn" data-filter="videos">Videos</button>
+          <button class="filter-btn" data-filter="event">Event Marketing</button>
+          <button class="filter-btn" data-filter="email">Email Campaigns</button>
+        </div>
+
+        <div class="project-featured">
+          <span class="project-badge">Latest Project</span>
+          <div class="project-card project-card-featured" data-category="technical">
+            <div class="project-card-inner">
+              <div class="project-card-front">
+                <div class="project-card-header">
+                  <h3>FlipIQ</h3>
+                  <span class="project-tag technical">Technical</span>
+                </div>
+                <p class="project-summary">Real Estate Deal Intelligence Platform — Full-stack SaaS for house flippers and real estate investors with AI underwriting, comps research, and rehab project management.</p>
+                <div class="project-tech-stack">
+                  <span>React</span><span>Supabase</span><span>Claude AI</span><span>Tailwind</span><span>Vite</span>
+                </div>
+                <button class="project-expand-btn" aria-label="View details">View details ↓</button>
+              </div>
+              <div class="project-card-back">
+                <div class="project-detail-content">
+                  <h4>FlipIQ — Real Estate Deal Intelligence Platform</h4>
+                  <p><strong>Company & Product:</strong> SaaS platform combining deal analysis, AI underwriting, comps research, and rehab project management in one workflow.</p>
+                  <p><strong>Key Capabilities:</strong></p>
+                  <ul>
+                    <li>Underwrite deals — Total project cost, net profit, ROI, deal quality score</li>
+                    <li>Scenario modeling — Base/Best/Worst cases (rehab overruns, hold time, ARV changes)</li>
+                    <li>AI-powered comps via Realie Premium & RentCast APIs</li>
+                    <li>Claude Vision — Generate rehab SOW from photos & property context</li>
+                    <li>Phase-based project management (Demolition → Rough-In → Finishes → Final Inspection)</li>
+                    <li>Share & collaborate — Deal links, email summaries (Resend), PDF export (jsPDF)</li>
+                  </ul>
+                  <p><strong>Tech Stack:</strong> React 18, Vite 7, Tailwind, Radix UI, Framer Motion, Recharts • Supabase (Auth, Postgres, Storage, Edge Functions) • Claude Vision • Google Maps, Realie, RentCast, Resend</p>
+                </div>
+                <button class="project-collapse-btn" aria-label="Close details">↑ Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card" data-category="technical">
+            <div class="project-card-glow"></div>
+            <span class="project-tag technical">Technical</span>
+            <h3>QueueSlot App</h3>
+            <p>Marketing & product collaboration for queue management SaaS. Team of 14, lead generation, webinars.</p>
+          </article>
+          <article class="project-card" data-category="technical">
+            <div class="project-card-glow"></div>
+            <span class="project-tag technical">Technical</span>
+            <h3>Scrum Scenario Master</h3>
+            <p>Online training program — SEO, content, webinar campaigns. 35% traffic increase, 25% enrollment growth.</p>
+          </article>
+          <article class="project-card" data-category="design">
+            <div class="project-card-glow"></div>
+            <span class="project-tag design">Design</span>
+            <h3>Website Redesign</h3>
+            <p>Refined brand consistency, reduced page load to 1.5s. WordPress, Adobe Creative Suite.</p>
+          </article>
+          <article class="project-card" data-category="design">
+            <div class="project-card-glow"></div>
+            <span class="project-tag design">Design</span>
+            <h3>E-store Design</h3>
+            <p>WordPress e-stores for clients. Product copy, visual branding, CMS optimization.</p>
+          </article>
+          <article class="project-card" data-category="videos">
+            <div class="project-card-glow"></div>
+            <span class="project-tag videos">Videos</span>
+            <h3>Promotional Videos</h3>
+            <p>40% organic visibility boost. LinkedIn & SERP video content. Premiere Pro, motion graphics.</p>
+          </article>
+          <article class="project-card" data-category="event">
+            <div class="project-card-glow"></div>
+            <span class="project-tag event">Event Marketing</span>
+            <h3>Webinar Campaigns</h3>
+            <p>2,500+ qualified leads, 5% conversion. Organized campaigns for Scrum Scenario Master.</p>
+          </article>
+          <article class="project-card" data-category="event">
+            <div class="project-card-glow"></div>
+            <span class="project-tag event">Event Marketing</span>
+            <h3>PR & Outreach</h3>
+            <p>8 major American publications. 15% additional traffic from featured placements.</p>
+          </article>
+          <article class="project-card" data-category="email">
+            <div class="project-card-glow"></div>
+            <span class="project-tag email">Email Campaigns</span>
+            <h3>Lead Nurture</h3>
+            <p>20% open rate, 15% conversion improvement. HubSpot, MailChimp automation.</p>
+          </article>
+          <article class="project-card" data-category="email">
+            <div class="project-card-glow"></div>
+            <span class="project-tag email">Email Campaigns</span>
+            <h3>Deal Summaries</h3>
+            <p>Resend integration for FlipIQ. Email summaries, shareable deal links.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="roles" id="roles">
+      <div class="section-inner section-wide">
+        <h2 class="section-title"><span class="section-num">03</span> Roles & Experience</h2>
+        <p class="section-subtitle">Leadership, strategy, and hands-on execution across digital marketing</p>
+        <div class="roles-grid">
+          <article class="role-card" data-role>
+            <div class="role-icon">📊</div>
+            <div class="role-content">
+              <h3>Head of Marketing</h3>
+              <span class="role-company">Zumallo Agile Inc.</span>
+              <span class="role-date">Aug 2023 – Present</span>
+              <p>Led team of 6. 35% traffic ↑, 25% enrollment ↑. $27K budget. 2,500+ webinar leads.</p>
+            </div>
+          </article>
+          <article class="role-card" data-role>
+            <div class="role-icon">⚙️</div>
+            <div class="role-content">
+              <h3>Project & Operations Manager</h3>
+              <span class="role-company">Zumallo Agile Inc.</span>
+              <span class="role-date">Aug 2023 – Present</span>
+              <p>Recruited 14 employees. Built dev + marketing team from scratch.</p>
+            </div>
+          </article>
+          <article class="role-card" data-role>
+            <div class="role-icon">🎯</div>
+            <div class="role-content">
+              <h3>Product & Marketing Consultant</h3>
+              <span class="role-company">Versoni Consultancy Ltd</span>
+              <span class="role-date">Nov 2022 – Jan 2024</span>
+              <p>End-to-end SaaS product development. Market research, stakeholder liaison.</p>
+            </div>
+          </article>
+          <article class="role-card" data-role>
+            <div class="role-icon">🔍</div>
+            <div class="role-content">
+              <h3>SEO Senior Executive</h3>
+              <span class="role-company">Blue Window Ltd</span>
+              <span class="role-date">Jun 2021 – Nov 2022</span>
+              <p>90+ pages optimized. 1st page Google. 20% organic traffic ↑ in 6 months.</p>
+            </div>
+          </article>
+          <article class="role-card" data-role>
+            <div class="role-icon">📢</div>
+            <div class="role-content">
+              <h3>Lead Marketing & Communications</h3>
+              <span class="role-company">Ecobank Cameroon</span>
+              <span class="role-date">Feb 2022 – May 2022</span>
+              <p>All social communications. Bank digital products. Agency coordination.</p>
+            </div>
+          </article>
+          <article class="role-card" data-role>
+            <div class="role-icon">📱</div>
+            <div class="role-content">
+              <h3>Digital Marketing Manager</h3>
+              <span class="role-company">TOF Business Hub</span>
+              <span class="role-date">Jan 2020 – Feb 2022</span>
+              <p>25% acquisition ↑. Facebook Ads. MailChimp, HubSpot automation.</p>
+            </div>
+          </article>
+          <article class="role-card" data-role>
+            <div class="role-icon">✨</div>
+            <div class="role-content">
+              <h3>Social Media Marketing Specialist</h3>
+              <span class="role-company">Kest Digital Agency</span>
+              <span class="role-date">Sept 2017 – Jan 2020</span>
+              <p>Twitter, Instagram, Facebook. Ad campaigns. Curated content, flyers, campaigns.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="companies" id="companies">
+      <div class="section-inner section-wide">
+        <h2 class="section-title"><span class="section-num">04</span> Companies I've Worked With</h2>
+        <p class="section-subtitle">Trusted by brands across US, Europe, and Africa</p>
+        <div class="companies-marquee">
+          <div class="companies-track">
+            <div class="company-logo">Zumallo Agile</div>
+            <div class="company-logo">Versoni Consultancy</div>
+            <div class="company-logo">Blue Window Ltd</div>
+            <div class="company-logo">Ecobank</div>
+            <div class="company-logo">TOF Business Hub</div>
+            <div class="company-logo">Kest Digital</div>
+            <div class="company-logo">Zumallo Agile</div>
+            <div class="company-logo">Versoni Consultancy</div>
+            <div class="company-logo">Blue Window Ltd</div>
+            <div class="company-logo">Ecobank</div>
+          </div>
+        </div>
+        <div class="companies-grid">
+          <div class="company-card" data-company><span>Zumallo Agile</span></div>
+          <div class="company-card" data-company><span>Versoni Consultancy</span></div>
+          <div class="company-card" data-company><span>Blue Window Ltd</span></div>
+          <div class="company-card" data-company><span>Ecobank</span></div>
+          <div class="company-card" data-company><span>TOF Business Hub</span></div>
+          <div class="company-card" data-company><span>Kest Digital</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills" id="skills">
+      <div class="section-inner">
+        <h2 class="section-title"><span class="section-num">05</span> Core Competencies</h2>
+        <div class="skills-grid">
+          <div class="skill-category" data-skill>
+            <div class="skill-icon">🔍</div>
+            <h3>Search Engine Optimization</h3>
+            <p>Ahrefs, Uber Suggest, Google Search Console, On/off-site SEO</p>
+          </div>
+          <div class="skill-category" data-skill>
+            <div class="skill-icon">📧</div>
+            <h3>Email & Ecommerce Marketing</h3>
+            <p>Brevo, Zoho Mail, HubSpot, MailChimp, WordPress</p>
+          </div>
+          <div class="skill-category" data-skill>
+            <div class="skill-icon">📊</div>
+            <h3>PPC & Social Media</h3>
+            <p>Hootsuite, Meta Business, Google Analytics, Google Ads</p>
+          </div>
+          <div class="skill-category" data-skill>
+            <div class="skill-icon">🎨</div>
+            <h3>Design</h3>
+            <p>Adobe Photoshop, Illustrator, Premiere Pro</p>
+          </div>
+          <div class="skill-category" data-skill>
+            <div class="skill-icon">📋</div>
+            <h3>Project Management</h3>
+            <p>Jira, ClickUp, Excel, PowerPoint</p>
+          </div>
+          <div class="skill-category" data-skill>
+            <div class="skill-icon">💻</div>
+            <h3>Technical Skills</h3>
+            <p>JavaScript, Ruby on Rails, HTML, CSS, SQL</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section-inner">
+        <h2 class="section-title"><span class="section-num">06</span> Get in Touch</h2>
+        <p class="contact-intro">Interested in working together or learning more about my work? I'd love to hear from you.</p>
+        <div class="contact-links">
+          <a href="mailto:jnzumafor@gmail.com" class="contact-link">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">jnzumafor@gmail.com</span>
+          </a>
+          <a href="tel:+237676463196" class="contact-link">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">+237 676 463 196</span>
+          </a>
+          <a href="https://linkedin.com/in/jnzumafor" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">Connect with me</span>
+          </a>
+          <a href="assets/Jesse-Joel-Resume.pdf" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <span class="contact-label">Resume</span>
+            <span class="contact-value">Download PDF</span>
+          </a>
+        </div>
+        <div class="contact-cta">
+          <a href="mailto:jnzumafor@gmail.com" class="btn btn-primary btn-large btn-magnetic">Send an Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Jesse-Joel Nzumafor. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

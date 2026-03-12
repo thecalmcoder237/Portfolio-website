@@ -1,0 +1,20 @@
+{
+  "name": "audit-tool",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "build:slides": "npx babel projects/audit-results-slides.jsx --presets=@babel/preset-react --out-file projects/audit-results-slides.js --no-babelrc"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.6",
+    "@babel/preset-react": "^7.28.5"
+  },
+  "dependencies": {
+    "airtable": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "open": "latest",
+    "openai": "latest"
+  }
+}

@@ -1,0 +1,80 @@
+---
+description: Audit backend stack, flow, and how to run/test (Qwen + Airtable).
+globs: server.js, .env.example, AUDIT-BACKEND.md
+---
+
+# Audit backend (Qwen + Airtable)
+
+## Stack
+
+- **Runtime**: Node (ESM)
+- **Server**: Express
+- **LLM**: Qwen via OpenAI-compatible API (OpenAI SDK), base URL `https://dashscope.aliyuncs.com/compatible-mode/v1`
+- **Database**: Airtable (Submissions + Error_Logs tables)
+
+## Entry
+
+- **File**: `server.js`
+- **Run**: `npm start` → server listens on **http://localhost:3001** (or `AUDIT_PORT` if set). **GET /health** returns `{ ok: true }` to verify.
+
+## Environment
+
+- `QWEN_API_KEY` — DashScope API key (dashscope.aliyuncs.com)
+- `AIRTABLE_API_KEY` — Airtable personal access token
+- `AIRTABLE_BASE_ID` — Airtable base ID
+- `AUDIT_PORT` — optional; default 3001
+
+Use `.env.example` or README for documentation; never commit real `.env`.
+
+## Main flow
+
+1. **POST /submit-audit** — client sends intake JSON
+2. Save row to Airtable **Submissions** with `status: 'Analyzing'`
+3. Call Qwen (`qwen-plus` by default) with system message + formatted intake
+4. Update same Airtable row: `claude_analysis` = analysis text, `status: 'Complete'`
+5. Return `{ success, submission_id, analysis }` to client
+
+On Qwen failure, log to **Error_Logs** with `stage: 'Qwen Call'`.
+
+## Model swap
+
+In `server.js`, change the `model` option in the Qwen `chat.completions.create` call:
+
+- `qwen-plus` — balanced (recommended for audits)
+- `qwen-turbo` — cheaper, faster (testing)
+- `qwen-max` — most capable
+- `qwen2.5-72b-instruct` — latest generation
+
+## Testing
+
+**Prerequisites**: Server running (`npm start`), valid `QWEN_API_KEY` in `.env`.
+
+**PowerShell (Invoke-RestMethod)**:
+
+```powershell
+$body = @{
+  client_name = "Test"
+  business_name = "Test Co"
+  biz_type = "Real estate"
+  team_size = "2-5"
+  tools_used = "Excel"
+  revenue_activity = "Property sales"
+  repetitive_tasks = "Emails"
+  biggest_bottleneck = "Reports"
+  admin_hours = "10-20 hrs"
+  biggest_priority = "Deal analysis"
+  ai_experience = "Never used"
+  budget = "$50-200"
+  goal_90_days = "Save time"
+} | ConvertTo-Json
+
+Invoke-RestMethod -Uri "http://localhost:3001/submit-audit" -Method Post -Body $body -ContentType "application/json"
+```
+
+**PowerShell (curl.exe)**:
+
+```powershell
+curl.exe -X POST "http://localhost:3001/submit-audit" -H "Content-Type: application/json" -d "{\"client_name\":\"Test\",\"business_name\":\"Test Co\",\"biz_type\":\"Real estate\",\"team_size\":\"2-5\",\"tools_used\":\"Excel\",\"revenue_activity\":\"Property sales\",\"repetitive_tasks\":\"Emails\",\"biggest_bottleneck\":\"Reports\",\"admin_hours\":\"10-20 hrs\",\"biggest_priority\":\"Deal analysis\",\"ai_experience\":\"Never used\",\"budget\":\"$50-200\",\"goal_90_days\":\"Save time\"}"
+```
+
+Success: JSON with `success: true`, `submission_id`, and `analysis`. Airtable gets new row (Complete) with analysis in `claude_analysis`.

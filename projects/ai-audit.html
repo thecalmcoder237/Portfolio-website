@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Business Development Audit Report - Structured intake, AI-assisted analysis, and professional PDF report. Try the intake form.">
+  <title>AI Business Development Audit Report | Projects | Jesse-Joel Nzumafor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="ai-audit-intake.css">
+</head>
+<body>
+  <div class="noise-overlay"></div>
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="nav-logo">JN</a>
+    <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../projects.html" class="nav-link-active">Projects</a></li>
+      <li><a href="../index.html#roles">Roles</a></li>
+      <li><a href="../index.html#companies">Companies</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="project-detail">
+    <div class="section-inner section-wide">
+      <!-- Breadcrumb -->
+      <nav class="project-breadcrumb" aria-label="Breadcrumb">
+        <a href="../projects.html">Projects</a>
+        <span class="project-breadcrumb-sep" aria-hidden="true">→</span>
+        <span>AI Business Development Audit Report</span>
+      </nav>
+
+      <!-- Title + summary -->
+      <header class="project-detail-header">
+        <h1 class="project-detail-title">AI Business Development Audit Report</h1>
+        <p class="project-detail-summary">
+          A consulting offering that helps small businesses figure out where AI can save time and money. Clients complete a structured intake, I run their answers through an AI-assisted analysis, and deliver a professional PDF report with three automation recommendations, an implementation roadmap, and quick wins. Try the intake form below to see the full flow—responses are not stored; use Copy to paste into Claude or ChatGPT.
+        </p>
+      </header>
+
+      <!-- AI terminal (decorative typing effect) -->
+      <div class="ai-terminal" aria-hidden="true">
+        <div class="ai-terminal-header">
+          <span class="ai-terminal-dot"></span>
+          <span class="ai-terminal-dot"></span>
+          <span class="ai-terminal-dot"></span>
+          <span class="ai-terminal-label">AI workflow</span>
+        </div>
+        <div class="ai-terminal-body">
+          <div class="ai-terminal-line" data-typing="> initializing AI workflow"></div>
+          <div class="ai-terminal-line" data-typing="> connecting APIs"></div>
+          <div class="ai-terminal-line" data-typing="> intake ready"></div>
+          <div class="ai-terminal-line" data-typing="> deployment complete"></div>
+        </div>
+      </div>
+
+      <!-- Try it: Interactive intake form -->
+      <section class="project-detail-section" id="try-it">
+        <h2 class="section-title"><span class="section-num">01</span> Try the intake form</h2>
+        <div class="project-inline-actions">
+          <button type="button" class="btn btn-outline btn-magnetic" id="openIntakeFullscreen">Open full-screen</button>
+          <button type="button" class="btn btn-outline btn-magnetic" id="shareIntakeLink">Copy share link</button>
+        </div>
+        <div id="ai-audit-intake-root"></div>
+      </section>
+
+      <!-- Audit Report Summary (Qwen AI output; slide-style view, single display, PDF download) -->
+      <section class="project-detail-section" id="audit-summary">
+        <h2 class="section-title"><span class="section-num">02</span> Audit Report Summary</h2>
+        <p class="section-subtitle">Filled automatically after you complete the intake form (Qwen AI analysis). Use <strong>Render summary</strong> to show the report as slides.</p>
+        <div class="audit-summary-toolbar">
+          <button type="button" class="btn btn-primary" id="renderAuditSummary">Render summary</button>
+          <button type="button" class="btn btn-outline" id="clearAuditSummary">Clear</button>
+          <button type="button" class="btn btn-ghost" id="toggleAuditSource">Edit source</button>
+        </div>
+        <div class="audit-summary-source-wrap" id="auditSummarySourceWrap" hidden>
+          <textarea id="auditSummaryInput" class="audit-summary-input" rows="10" placeholder="Paste or edit the AI analysis here, then click Render summary..."></textarea>
+        </div>
+        <div id="auditSlidesMount" class="audit-react-mount" aria-live="polite"></div>
+        <p class="audit-summary-empty" id="auditSummaryEmpty">Complete the intake form above, or paste analysis text and click <strong>Render summary</strong> to see the report here.</p>
+      </section>
+
+      <!-- Discuss Implementation: 30-min call CTA + Cal.com booking -->
+      <section class="project-detail-section" id="discuss-implementation">
+        <h2 class="section-title"><span class="section-num">03</span> Discuss Implementation</h2>
+        <p class="section-subtitle discuss-cta">Jump on a 30‑min call — we’ll go through your results and how your business can do better AI integration.</p>
+        <div class="cal-embed-wrap">
+          <a href="https://cal.com/jesse-joel-nzumafor-kdxwke/secret" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-cal-book" id="calBookButton">Book a 30‑min call</a>
+          <div class="cal-inline" aria-label="Cal.com scheduling">
+            <iframe title="Book a 30-minute call" src="https://cal.com/jesse-joel-nzumafor-kdxwke/secret?embed=true" style="width:100%;height:100%;min-height:630px;border:0;border-radius:12px;" loading="lazy"></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Screenshots -->
+      <section class="project-detail-section" id="screenshots" data-optional="true">
+        <h2 class="section-title"><span class="section-num">04</span> Screenshots</h2>
+        <div class="project-screenshots-grid">
+          <figure class="project-screenshot">
+            <img src="../assets/projects/ai-audit/intake-form.svg" alt="AI Audit intake form - question view" loading="lazy">
+            <figcaption>Intake form — question step</figcaption>
+          </figure>
+          <figure class="project-screenshot">
+            <img src="../assets/projects/ai-audit/report-sample.svg" alt="Sample audit report page" loading="lazy">
+            <figcaption>Sample report — recommendations</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- YouTube videos -->
+      <section class="project-detail-section" id="videos" data-optional="true">
+        <h2 class="section-title"><span class="section-num">05</span> Videos</h2>
+        <p class="section-subtitle">Walkthrough and process videos (add your YouTube links below)</p>
+        <div class="project-videos-grid">
+          <div class="project-video-embed">
+            <p class="project-video-placeholder">YouTube embed placeholder — replace with your video URL</p>
+          </div>
+          <div class="project-video-embed">
+            <p class="project-video-placeholder">Second video slot — optional</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Intake full-screen modal -->
+  <div class="project-modal" id="intakeModal" aria-hidden="true">
+    <div class="project-modal-backdrop" data-action="close-modal"></div>
+    <div class="project-modal-panel" role="dialog" aria-modal="true" aria-label="AI Audit Intake Form">
+      <div class="project-modal-header">
+        <div>
+          <div class="project-modal-title">AI Audit Intake Form</div>
+          <div class="project-modal-subtitle">Full-screen mode — copy and share this page link anytime.</div>
+        </div>
+        <button type="button" class="project-modal-close" data-action="close-modal">Close</button>
+      </div>
+      <div class="project-modal-body">
+        <div id="ai-audit-intake-modal-mount"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Jesse-Joel Nzumafor. All rights reserved.</p>
+  </footer>
+
+  <!-- React (for animated audit slide deck; slides are precompiled, no in-browser Babel) -->
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script>
+    window.AUDIT_API_BASE = window.AUDIT_API_BASE || 'http://localhost:3001';
+  </script>
+  <script src="../script.js"></script>
+  <script src="ai-audit-intake.js"></script>
+  <script src="audit-results-slides.js"></script>
+  <script src="ai-audit-page.js"></script>
+</body>
+</html>
