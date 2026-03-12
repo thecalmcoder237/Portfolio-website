@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const PORT = process.env.AUDIT_PORT || 3001;
 
 // Serve static portfolio — only for local dev; Vercel serves static via filesystem
-app.use(express.static(join(__dirname)));
+app.use(express.static(join(__dirname, 'public')));
 
 app.listen(PORT, () => {
   const url = `http://localhost:${PORT}`;

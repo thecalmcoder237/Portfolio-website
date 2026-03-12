@@ -5,7 +5,7 @@
   ],
   "routes": [
     { "handle": "filesystem" },
-    { "src": "/health", "dest": "/api/index.js" },
-    { "src": "/submit-audit", "dest": "/api/index.js" }
+    { "src": "/health", "dest": "/api" },
+    { "src": "/submit-audit", "dest": "/api" }
   ]
 }
