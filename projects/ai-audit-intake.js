@@ -4,7 +4,11 @@
  * Set window.AUDIT_API_BASE (e.g. 'http://localhost:3001') if different from default.
  */
 (function () {
-  const API_BASE = (typeof window !== 'undefined' && window.AUDIT_API_BASE) ? window.AUDIT_API_BASE : 'http://localhost:3001';
+  const API_BASE = (typeof window !== 'undefined' && window.AUDIT_API_BASE !== undefined)
+    ? window.AUDIT_API_BASE
+    : (typeof window !== 'undefined' && window.location && window.location.hostname === 'localhost')
+      ? 'http://localhost:3001'
+      : '';
 
   const questions = [
     { id: "client_name", section: "Contact", question: "Your full name", hint: "Name of the primary contact", type: "text" },
